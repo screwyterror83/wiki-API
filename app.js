@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.static("public"));
 
-const dbName = wikiDB
+const dbName = "wikiDB";
 
 mongoose.connect(
   "mongodb+srv://admin-darren:Mongodb382%23@cluster0-gmncq.mongodb.net/" +
@@ -44,7 +44,7 @@ const Article = mongoose.model("Article", articleSchema)
 
 
 
-const port = process.env.PORT
+let port = process.env.PORT
 if (port == null || port == "") {
   port = 3000
 }
