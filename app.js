@@ -29,3 +29,27 @@ const articleSchema = new mongoose.Schema({
 })
 
 const Article = mongoose.model("Article", articleSchema)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const port = process.env.PORT
+if (port == null || port == "") {
+  port = 3000
+}
+app.listen(port, (err) => {
+  if (!err) {
+    console.log("Server started on port " + port)
+  }
+});
